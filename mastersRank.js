@@ -14,6 +14,15 @@ var playerList = [
 
 var maxWeight = 10;
 
+function updatePlayerName(name) {
+  playerList.playerName = name;
+}
+
+function addPlayer(name, score, overUnder) {
+  playerList.push({ playerName: name, rank: playerList.length + 1, score: score, overUnder: 3 });
+  console.log(playerList);
+}
+
 function removePlayer(player) {
   console.log("Removing Player: " + playerList[player].playerName);
   playerList.splice(player, 1);
@@ -41,5 +50,4 @@ function calculateAllScores(id) {
   }
 }
 
-console.log(playerList);
-removePlayer(4);
+addPlayer("Tim", 3, 2);
