@@ -15,11 +15,10 @@ var playerList = [
 var maxWeight = 10;
 
 function removePlayer(player) {
+  console.log("Removing Player: " + playerList[player].playerName);
   playerList.splice(player, 1);
-  console.log("Removed Player: " + playerList[player].playerName);
   repopulate();
   console.log(playerList);
-
 };
 
 function repopulate() {
