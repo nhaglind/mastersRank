@@ -14,10 +14,10 @@ length = len(name_array)
 
 for i in range(0, length):
     full_name = name_array[i].get_text()
-    if (uo_array[i].get_text() == 'E' or (uo_array[i].get_text() == 'CUT')):
+    try:
+        under_over = int(uo_array[i].get_text())
+    except ValueError:
         under_over = uo_array[i].get_text()
-    else:
-        under_over = int((uo_array[i].get_text()))
     total_score = int((ts_array[i].get_text()))
     ary.append({'playerName': full_name, 'score': total_score, 'overUnder': under_over})
 print(ary)
