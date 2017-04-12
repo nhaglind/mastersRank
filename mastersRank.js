@@ -1,3 +1,5 @@
+var json = require('./leaderboard_data.json')
+
 var user = [
   {id: 1, name: 'Rick', totalScore: 0},
   {id: 2, name: 'Morty', totalScore: 0}
@@ -13,6 +15,10 @@ var playerList = [
 ];
 
 var maxWeight = 10;
+
+function updateLeaderboard() {
+  playerList.push(json);
+}
 
 function updatePlayerName(name) {
   playerList.playerName = name;
@@ -50,4 +56,5 @@ function calculateAllScores(id) {
   }
 }
 
-addPlayer("Tim", 3, 2);
+updateLeaderboard();
+console.log(playerList);
