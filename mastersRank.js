@@ -17,7 +17,7 @@ var playerList = [
 var maxWeight = 10;
 
 function updateLeaderboard() {
-  playerList.push(json);
+  pds = json;
 }
 
 function updatePlayerName(name) {
@@ -57,4 +57,4 @@ function calculateAllScores(id) {
 }
 
 updateLeaderboard();
-console.log(playerList);
+console.log(pds);
